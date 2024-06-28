@@ -331,6 +331,7 @@
               const img = document.createElement("img");
               img.src = src;
               img.classList.add("fiche-carousel-image");
+              img.loading = "lazy";
               return img;
           });
           ficheImages.forEach(img => ficheCarousel.appendChild(img));
