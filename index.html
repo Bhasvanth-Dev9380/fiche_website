@@ -190,7 +190,7 @@
       <p>
         Explore the origin story of Fiche, ignited by the passion and
         expertise
-        of founders Gokul and Mohan
+        of founders Gokul and Mohan Raj
       </p>
     </div>
     <div class="founder-carousel-unique">
@@ -209,189 +209,218 @@
 
   </div>
 
-
-
-
-
-
   <div class="services" id="services">
     <div class=" services-tagline">
       <img src="./pictures/Group 29.png" alt="logo" />
     </div>
-    <section>
-      <div class="fiche-categories">
-          <span class="fiche-category-button" data-category="ad_shoot">Ad Shoot</span>
-          <span class="fiche-category-button" data-category="baby">Baby</span>
-          <span class="fiche-category-button" data-category="corporate_shoot">Corporate Shoot</span>
-          <span class="fiche-category-button" data-category="drone_shoot">Drone Shoot</span>
-          <span class="fiche-category-button" data-category="maternity">Maternity</span>
-          <span class="fiche-category-button" data-category="wedding">Wedding</span>
-      </div>
-      <div class="fiche-carousel-container">
-          <div class="fiche-carousel">
-              <!-- Images will be inserted dynamically -->
-          </div>
-          <button class="fiche-arrow-button fiche-left-arrow"><span>&#8249;</span></button>
-          <button class="fiche-arrow-button fiche-right-arrow"><span>&#8250;</span></button>
-      </div>
-  </section>
-  <script>
-      const ficheImagesData = {
+
+  <section>
+    <div class="fiche-categories-wrapper">
+        <button class="fiche-arrow-button fiche-left-category-arrow"><span>&#8249;</span></button>
+        <div class="fiche-categories">
+            <span class="fiche-category-button" data-category="ad_shoot">Ad Shoot</span>
+            <span class="fiche-category-button" data-category="baby">Baby</span>
+            <span class="fiche-category-button" data-category="corporate_shoot">Corporate Shoot</span>
+            <span class="fiche-category-button" data-category="drone_shoot">Drone Shoot</span>
+            <span class="fiche-category-button" data-category="maternity">Maternity</span>
+            <span class="fiche-category-button" data-category="wedding">Wedding</span>
+        </div>
+        <button class="fiche-arrow-button fiche-right-category-arrow"><span>&#8250;</span></button>
+    </div>
+    <div class="fiche-carousel-container">
+        <div class="fiche-carousel">
+            <!-- Images will be inserted dynamically -->
+        </div>
+        <button class="fiche-arrow-button fiche-left-arrow"><span>&#8249;</span></button>
+        <button class="fiche-arrow-button fiche-right-arrow"><span>&#8250;</span></button>
+    </div>
+</section>
+<script>
+    const ficheImagesData = {
         ad_shoot: [
-              "categories/ad shoot/1.jpg",
-              "categories/ad shoot/2.jpg",
-              "categories/ad shoot/3.jpg",
-              "categories/ad shoot/4.jpg",
-              "categories/ad shoot/5.jpg",
-              "categories/ad shoot/6.jpg",
-              "categories/ad shoot/7.jpg",
-          ],
-          baby: [
-              "categories/baby/1.jpg",
-              "categories/baby/2.jpg",
-              "categories/baby/3.jpg",
-              "categories/baby/4.jpg",
-              "categories/baby/5.jpg",
-              "categories/baby/6.jpg",
-              "categories/baby/7.jpg",
-              "categories/baby/8.jpg",
-          ],
-          corporate_shoot: [
-              "categories/corporate shoot/1.jpg",
-              "categories/corporate shoot/2.jpg",
-              "categories/corporate shoot/3.jpg",
-              "categories/corporate shoot/4.jpg",
-              "categories/corporate shoot/5.jpg",
-              "categories/corporate shoot/6.jpg",
-              "categories/corporate shoot/7.jpg",
-              "categories/corporate shoot/8.jpg",
-              "categories/corporate shoot/9.jpg",
-              "categories/corporate shoot/10.jpg",
-              "categories/corporate shoot/11.jpg",
-              "categories/corporate shoot/12.jpg",
-              "categories/corporate shoot/13.jpg",
-              "categories/corporate shoot/14.jpg",
-              "categories/corporate shoot/15.jpg",
-              "categories/corporate shoot/16.jpg",
-              "categories/corporate shoot/17.jpg",
-              "categories/corporate shoot/18.jpg",
-              "categories/corporate shoot/19.jpg",
-              "categories/corporate shoot/20.jpg",
-          
-          ],
-          drone_shoot: [
-              "categories/drone shoot/1.jpg",
-              "categories/drone shoot/2.jpg",
-              "categories/drone shoot/3.jpg",
-              "categories/drone shoot/4.jpg",
-              "categories/drone shoot/5.jpg",
-          ],
-          maternity: [
-              "categories/maternity/1.jpg",
-              "categories/maternity/2.jpg",
-              "categories/maternity/3.jpg",
-              "categories/maternity/4.jpg",
-              "categories/maternity/5.jpg",
-              "categories/maternity/6.jpg",
-              "categories/maternity/7.jpg",
-              "categories/maternity/8.jpg",
-              "categories/maternity/9.jpg",
-              "categories/maternity/10.jpg",
-              "categories/maternity/11.jpg",
+            "categories/ad shoot/1.jpg",
+            "categories/ad shoot/2.jpg",
+            "categories/ad shoot/3.jpg",
+            "categories/ad shoot/4.jpg",
+            "categories/ad shoot/5.jpg",
+            "categories/ad shoot/6.jpg",
+            "categories/ad shoot/7.jpg",
+        ],
+        baby: [
+            "categories/baby/1.jpg",
+            "categories/baby/2.jpg",
+            "categories/baby/3.jpg",
+            "categories/baby/4.jpg",
+            "categories/baby/5.jpg",
+            "categories/baby/6.jpg",
+            "categories/baby/7.jpg",
+            "categories/baby/8.jpg",
+        ],
+        corporate_shoot: [
+            "categories/corporate shoot/1.jpg",
+            "categories/corporate shoot/2.jpg",
+            "categories/corporate shoot/3.jpg",
+            "categories/corporate shoot/4.jpg",
+            "categories/corporate shoot/5.jpg",
+            "categories/corporate shoot/6.jpg",
+            "categories/corporate shoot/7.jpg",
+            "categories/corporate shoot/8.jpg",
+            "categories/corporate shoot/9.jpg",
+            "categories/corporate shoot/10.jpg",
+            "categories/corporate shoot/11.jpg",
+            "categories/corporate shoot/12.jpg",
+            "categories/corporate shoot/13.jpg",
+            "categories/corporate shoot/14.jpg",
+            "categories/corporate shoot/15.jpg",
+            "categories/corporate shoot/16.jpg",
+            "categories/corporate shoot/17.jpg",
+            "categories/corporate shoot/18.jpg",
+            "categories/corporate shoot/19.jpg",
+            "categories/corporate shoot/20.jpg",
+        ],
+        drone_shoot: [
+            "categories/drone shoot/1.jpg",
+            "categories/drone shoot/2.jpg",
+            "categories/drone shoot/3.jpg",
+            "categories/drone shoot/4.jpg",
+            "categories/drone shoot/5.jpg",
+        ],
+        maternity: [
+            "categories/maternity/1.jpg",
+            "categories/maternity/2.jpg",
+            "categories/maternity/3.jpg",
+            "categories/maternity/4.jpg",
+            "categories/maternity/5.jpg",
+            "categories/maternity/6.jpg",
+            "categories/maternity/7.jpg",
+            "categories/maternity/8.jpg",
+            "categories/maternity/9.jpg",
+            "categories/maternity/10.jpg",
+            "categories/maternity/11.jpg",
+        ],
+        wedding: [
+            "categories/wedding/1.jpg",
+            "categories/wedding/2.jpg",
+            "categories/wedding/3.jpg",
+            "categories/wedding/4.jpg",
+            "categories/wedding/5.jpg",
+            "categories/wedding/6.jpg",
+            "categories/wedding/7.jpg",
+            "categories/wedding/8.jpg",
+            "categories/wedding/9.jpg",
+        ]
+    };
 
-          ],
-          wedding: [
-              "categories/wedding/1.jpg",
-              "categories/wedding/2.jpg",
-              "categories/wedding/3.jpg",
-              "categories/wedding/4.jpg",
-              "categories/wedding/5.jpg",
-              "categories/wedding/6.jpg",
-              "categories/wedding/7.jpg",
-              "categories/wedding/8.jpg",
-              "categories/wedding/9.jpg",
+    const ficheCarousel = document.querySelector(".fiche-carousel");
+    const ficheLeftArrow = document.querySelector(".fiche-left-arrow");
+    const ficheRightArrow = document.querySelector(".fiche-right-arrow");
+    const ficheCategoryButtons = document.querySelectorAll(".fiche-category-button");
 
-          ]
-      };
+    let ficheCurrentIndex = 0;
+    let fichePrevIndex;
+    let ficheCurrentCategory = "ad_shoot";
+    let ficheImages;
 
-      const ficheCarousel = document.querySelector(".fiche-carousel");
-      const ficheLeftArrow = document.querySelector(".fiche-left-arrow");
-      const ficheRightArrow = document.querySelector(".fiche-right-arrow");
-      const ficheCategoryButtons = document.querySelectorAll(".fiche-category-button");
+    const ficheLoadImages = (category) => {
+        ficheCurrentCategory = category;
+        ficheCarousel.innerHTML = "";
+        ficheImages = ficheImagesData[category].map(src => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.classList.add("fiche-carousel-image");
+            return img;
+        });
+        ficheImages.forEach(img => ficheCarousel.appendChild(img));
+        ficheCurrentIndex = 0;
+    };
 
-      let ficheCurrentIndex = 0;
-      let fichePrevIndex;
-      let ficheCurrentCategory = "ad_shoot";
-      let ficheImages;
+    const ficheImageWidth = () => {
+        return document.querySelector(".fiche-carousel-image").clientWidth;
+    };
 
-      const ficheLoadImages = (category) => {
-          ficheCurrentCategory = category;
-          ficheCarousel.innerHTML = "";
-          ficheImages = ficheImagesData[category].map(src => {
-              const img = document.createElement("img");
-              img.src = src;
-              img.classList.add("fiche-carousel-image");
-              return img;
-          });
-          ficheImages.forEach(img => ficheCarousel.appendChild(img));
-          ficheCurrentIndex = 0;
-      };
+    ficheLeftArrow.addEventListener("click", () => {
+        fichePrevIndex = ficheCurrentIndex;
+        ficheCurrentIndex = (ficheCurrentIndex - 1 + ficheImages.length) % ficheImages.length;
+        ficheCarousel.style.transform = `translateX(-${ficheImageWidth()}px)`;
+        ficheCarousel.insertBefore(ficheImages[ficheCurrentIndex], ficheCarousel.firstChild);
 
-      const ficheImageWidth = () => {
-          return document.querySelector(".fiche-carousel-image").clientWidth;
-      };
+        setTimeout(() => {
+            ficheCarousel.style.transform = "";
+            ficheCarousel.classList.add("fiche-sliding-transition");
+        }, 10);
 
-      ficheLeftArrow.addEventListener("click", () => {
-          fichePrevIndex = ficheCurrentIndex;
-          ficheCurrentIndex = (ficheCurrentIndex - 1 + ficheImages.length) % ficheImages.length;
-          ficheCarousel.style.transform = `translateX(-${ficheImageWidth()}px)`;
-          ficheCarousel.insertBefore(ficheImages[ficheCurrentIndex], ficheCarousel.firstChild);
+        setTimeout(() => {
+            ficheCarousel.classList.remove("fiche-sliding-transition");
+        }, 490);
+    });
 
-          setTimeout(() => {
-              ficheCarousel.style.transform = "";
-              ficheCarousel.classList.add("fiche-sliding-transition");
-          }, 10);
+    ficheRightArrow.addEventListener("click", () => {
+        ficheCarousel.classList.add("fiche-sliding-transition");
 
-          setTimeout(() => {
-              ficheCarousel.classList.remove("fiche-sliding-transition");
-          }, 490);
-      });
+        fichePrevIndex = ficheCurrentIndex;
+        ficheCurrentIndex = (ficheCurrentIndex + 1) % ficheImages.length;
 
-      ficheRightArrow.addEventListener("click", () => {
-          ficheCarousel.classList.add("fiche-sliding-transition");
+        ficheCarousel.style.transform = `translateX(-${ficheImageWidth()}px)`;
 
-          fichePrevIndex = ficheCurrentIndex;
-          ficheCurrentIndex = (ficheCurrentIndex + 1) % ficheImages.length;
+        setTimeout(() => {
+            ficheCarousel.appendChild(ficheImages[fichePrevIndex]);
+            ficheCarousel.classList.remove("fiche-sliding-transition");
+            ficheCarousel.style.transform = "";
+        }, 500);
+    });
 
-          ficheCarousel.style.transform = `translateX(-${ficheImageWidth()}px)`;
+    ficheCategoryButtons.forEach(button => {
+        button.addEventListener("click", (e) => {
+            ficheCategoryButtons.forEach(btn => btn.classList.remove("fiche-active"));
+            button.classList.add("fiche-active");
+            ficheLoadImages(e.target.dataset.category);
+        });
+    });
 
-          setTimeout(() => {
-              ficheCarousel.appendChild(ficheImages[fichePrevIndex]);
-              ficheCarousel.classList.remove("fiche-sliding-transition");
-              ficheCarousel.style.transform = "";
-          }, 500);
-      });
+    // Auto-scroll functionality
+    setInterval(() => {
+        ficheRightArrow.click();
+    }, 3000); // Change the interval as needed (3000ms = 3 seconds)
 
-      ficheCategoryButtons.forEach(button => {
-          button.addEventListener("click", (e) => {
-              ficheCategoryButtons.forEach(btn => btn.classList.remove("fiche-active"));
-              button.classList.add("fiche-active");
-              ficheLoadImages(e.target.dataset.category);
-          });
-      });
+    // Load initial category
+    document.querySelector(`[data-category="${ficheCurrentCategory}"]`).classList.add("fiche-active");
+    ficheLoadImages(ficheCurrentCategory);
 
-      // Auto-scroll functionality
-      setInterval(() => {
-          ficheRightArrow.click();
-      }, 3000); // Change the interval as needed (3000ms = 3 seconds)
+    // Category scrolling functionality
+    const ficheCategories = document.querySelector('.fiche-categories');
+    const ficheLeftCategoryArrow = document.querySelector('.fiche-left-category-arrow');
+    const ficheRightCategoryArrow = document.querySelector('.fiche-right-category-arrow');
 
-      // Load initial category
-      document.querySelector(`[data-category="${ficheCurrentCategory}"]`).classList.add("fiche-active");
-      ficheLoadImages(ficheCurrentCategory);
-  </script>
+    let ficheCategoryIndex = 0;
+
+    const updateCategoryVisibility = () => {
+        const buttons = Array.from(ficheCategories.children);
+        buttons.forEach((btn, index) => {
+            if (index >= ficheCategoryIndex && index < ficheCategoryIndex + 3) {
+                btn.style.display = 'inline-block';
+            } else {
+                btn.style.display = 'none';
+            }
+        });
+    };
+
+    ficheLeftCategoryArrow.addEventListener('click', () => {
+        ficheCategoryIndex = Math.max(0, ficheCategoryIndex - 1);
+        updateCategoryVisibility();
+    });
+
+    ficheRightCategoryArrow.addEventListener('click', () => {
+        ficheCategoryIndex = Math.min(ficheCategoryButtons.length - 3, ficheCategoryIndex + 1);
+        updateCategoryVisibility();
+    });
+
+    // Initial visibility
+    updateCategoryVisibility();
+</script>
 
 
-  </div>
+
+
   <div id="team" class="team">
     <h1 class="ourteam">Our Team</h1>
     <div class="team-carousel-container">
@@ -446,7 +475,7 @@
         <div class="team-members">
           <div class="team-team-mem">
             <img src="images/Ui Ux Designer/Vaishnavi.jpg" alt="Mr. Vaishnavi" loading="lazy">
-            <h4>Mr. Vaishnavi</h4>
+            <h4>Ms. Vaishnavi</h4>
           </div>
         </div>
       </div>
@@ -480,13 +509,13 @@
   <div class="counts" id="counts">
     <div class="count">
       <span class="number">
-        <p>10</p>
+        <p>25+</p>
       </span>
       <p>Projects done</p>
     </div>
     <div class="count">
       <span class="number">
-        <p>40,000+</p>
+        <p>60,000+</p>
       </span>
       <p>Moment snapped</p>
     </div>
