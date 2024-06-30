@@ -657,11 +657,15 @@ position: relative;
 
 
 
+/* Other existing styles */
+
+/* Animation css */
+
 .custom-carousel-wrapper {
   position: absolute;
   top: 400px;
-  right: -5vw;
-  width: 150vw;
+  right: -5vw; /* Start from the right edge */
+  width: 200vw; /* Adjust as needed */
   height: 120px;
   overflow: hidden;
   transform-origin: right;
@@ -687,19 +691,17 @@ position: relative;
 
 .custom-slide-track {
   display: flex;
-  width: calc(200px * 18);
-  /* Adjusted for 18 images to loop smoothly */
+  width: calc(200px * 18); /* Adjusted for 18 images to loop smoothly */
   animation: custom-scroll 20s linear infinite;
 }
 
 @keyframes custom-scroll {
   0% {
-    transform: translateX(100vw);
+    transform: translateX(100vw); /* Start way outside the viewport */
   }
 
   100% {
-    transform: translateX(calc(-200px * 9));
-    /* Move by half the number of images */
+    transform: translateX(calc(-200px * 9)); /* Move by half the number of images */
   }
 }
 
@@ -714,8 +716,42 @@ position: relative;
 }
 
 .custom-slide img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%; /* Ensure the image takes full width of the slide */
+  height: 100%; /* Ensure the image takes full height of the slide */
+  object-fit: cover; /* Cover the slide area without distorting */
+}
+
+/* Adjust styles for mobile */
+@media (max-width: 768px) {
+  .custom-carousel-wrapper {
+    top: 100px;
+    right: 0; /* Start from the right edge */
+    width: 150vw; /* Ensure it fits within mobile view */
+    transform: rotate(14deg);
+  }
+
+  .custom-slider {
+    width: 150%; /* Match the extended width */
+  }
+
+  .custom-slide-track {
+    width: calc(200px * 18); /* Ensure proper width for all images */
+  }
+
+  .custom-slide {
+    width: 200px; /* Maintain image size */
+    height: 120px; /* Maintain image size */
+  }
+
+  @keyframes custom-scroll {
+    0% {
+      transform: translateX(100vw); /* Start way outside the viewport */
+    }
+
+    100% {
+      transform: translateX(calc(-200px * 9)); /* Move by half the number of images */
+    }
+  }
 }
 
 
