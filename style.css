@@ -724,7 +724,7 @@ position: relative;
   .custom-carousel-wrapper {
     position: absolute;
     top: 400px;
-    right: -2vw;
+    right: 3.5vw;
     width: 150vw;
     height: 100px;
     overflow-x: hidden;
@@ -1374,5 +1374,4 @@ section {
       font-size: 24px;
   }
 }
-
 
