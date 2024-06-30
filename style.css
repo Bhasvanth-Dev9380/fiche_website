@@ -657,14 +657,11 @@ position: relative;
 
 
 
-/* General styles */
-
-/* Animation css */
 .custom-carousel-wrapper {
   position: absolute;
   top: 400px;
-  right: -50vw; /* Start from outside the viewport */
-  width: 200vw; /* Extended width to animate through */
+  right: -5vw;
+  width: 150vw;
   height: 120px;
   overflow: hidden;
   transform-origin: right;
@@ -672,16 +669,16 @@ position: relative;
 }
 
 .custom-carousel-wrapper:nth-child(2) {
-  top: 600px; /* Ensure enough vertical spacing */
+  top: 130px;
 }
 
 .custom-carousel-wrapper:nth-child(3) {
-  top: 800px; /* Ensure enough vertical spacing */
+  top: 260px;
 }
 
 .custom-slider {
   height: 100%;
-  width: 200%; /* Match the extended width */
+  width: 150%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -690,17 +687,19 @@ position: relative;
 
 .custom-slide-track {
   display: flex;
-  width: calc(200px * 18); /* Adjusted for 18 images to loop smoothly */
+  width: calc(200px * 18);
+  /* Adjusted for 18 images to loop smoothly */
   animation: custom-scroll 20s linear infinite;
 }
 
 @keyframes custom-scroll {
   0% {
-    transform: translateX(100vw); /* Start way outside the viewport */
+    transform: translateX(100vw);
   }
 
   100% {
-    transform: translateX(calc(-200px * 18)); /* Move by the full width of images */
+    transform: translateX(calc(-200px * 9));
+    /* Move by half the number of images */
   }
 }
 
@@ -715,50 +714,8 @@ position: relative;
 }
 
 .custom-slide img {
-  width: 100%; /* Ensure the image takes full width of the slide */
-  height: 100%; /* Ensure the image takes full height of the slide */
-  object-fit: cover; /* Cover the slide area without distorting */
-}
-
-/* Adjust styles for mobile */
-@media (max-width: 768px) {
-  .custom-carousel-wrapper {
-    top: 100px;
-    right: -50vw; /* Start from outside the viewport */
-    width: 200vw; /* Extended width to animate through */
-    transform: rotate(14deg);
-  }
-
-  .custom-carousel-wrapper:nth-child(2) {
-    top: 300px; /* Ensure enough vertical spacing */
-  }
-
-  .custom-carousel-wrapper:nth-child(3) {
-    top: 500px; /* Ensure enough vertical spacing */
-  }
-
-  .custom-slider {
-    width: 200%; /* Match the extended width */
-  }
-
-  .custom-slide-track {
-    width: calc(100px * 18); /* Adjust width for smaller images */
-  }
-
-  .custom-slide {
-    width: 100px; /* Adjust image size */
-    height: 60px; /* Adjust image size */
-  }
-
-  @keyframes custom-scroll {
-    0% {
-      transform: translateX(100vw); /* Start way outside the viewport */
-    }
-
-    100% {
-      transform: translateX(calc(-100px * 18)); /* Move by the full width of images */
-    }
-  }
+  max-width: 100%;
+  max-height: 100%;
 }
 
 
