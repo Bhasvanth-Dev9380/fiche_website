@@ -1134,10 +1134,12 @@ section {
   position: relative;
 }
 
+/* General Styles for Fiche Categories */
 .fiche-categories-wrapper {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
 }
 
 .fiche-categories {
@@ -1162,6 +1164,98 @@ section {
 .fiche-category-button.fiche-active {
   color: #b434fc;
 }
+
+.fiche-arrow-button {
+  padding: 0;
+  color: black;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.fiche-arrow-button:hover {
+  color: #b434fc;
+}
+
+.fiche-left-arrow,
+.fiche-right-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  background: rgba(255, 255, 255, 1);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.fiche-left-arrow {
+  left: 10px;
+}
+
+.fiche-right-arrow {
+  right: 10px;
+}
+
+.fiche-left-arrow:hover,
+.fiche-right-arrow:hover {
+  background: rgba(239, 236, 236, 0.7);
+  transform: scale(1.1);
+}
+
+/* Mobile Specific Styles for Fiche Categories */
+@media (max-width: 768px) {
+  .fiche-category-button {
+    font-size: 16px; /* Adjusted font size for smaller screens */
+  }
+
+  .fiche-categories-wrapper {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+  }
+
+  .fiche-categories {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Ensure snap to category button */
+  }
+
+  .fiche-category-button {
+    scroll-snap-align: start; /* Ensure snap alignment */
+  }
+
+  .fiche-arrow-button {
+    display: none; /* Hide arrows on mobile */
+  }
+}
+
+@media (max-width: 400px) {
+  .fiche-category-button {
+    font-size: 14px; /* Further adjusted font size for very small screens */
+  }
+
+  .fiche-categories {
+    padding: 0 5px;
+  }
+}
+
+
+
+
 
 .fiche-carousel-container {
   position: relative;
@@ -1280,3 +1374,5 @@ section {
       font-size: 24px;
   }
 }
+
+
