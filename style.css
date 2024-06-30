@@ -657,15 +657,14 @@ position: relative;
 
 
 
-/* Other existing styles */
+/* General styles */
 
 /* Animation css */
-
 .custom-carousel-wrapper {
   position: absolute;
   top: 400px;
-  right: -5vw; /* Start from the right edge */
-  width: 200vw; /* Adjust as needed */
+  right: -50vw; /* Start from outside the viewport */
+  width: 200vw; /* Extended width to animate through */
   height: 120px;
   overflow: hidden;
   transform-origin: right;
@@ -673,16 +672,16 @@ position: relative;
 }
 
 .custom-carousel-wrapper:nth-child(2) {
-  top: 130px;
+  top: 600px; /* Ensure enough vertical spacing */
 }
 
 .custom-carousel-wrapper:nth-child(3) {
-  top: 260px;
+  top: 800px; /* Ensure enough vertical spacing */
 }
 
 .custom-slider {
   height: 100%;
-  width: 150%;
+  width: 200%; /* Match the extended width */
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -701,7 +700,7 @@ position: relative;
   }
 
   100% {
-    transform: translateX(calc(-200px * 9)); /* Move by half the number of images */
+    transform: translateX(calc(-200px * 18)); /* Move by the full width of images */
   }
 }
 
@@ -725,22 +724,30 @@ position: relative;
 @media (max-width: 768px) {
   .custom-carousel-wrapper {
     top: 100px;
-    right: 0; /* Start from the right edge */
-    width: 150vw; /* Ensure it fits within mobile view */
+    right: -50vw; /* Start from outside the viewport */
+    width: 200vw; /* Extended width to animate through */
     transform: rotate(14deg);
   }
 
+  .custom-carousel-wrapper:nth-child(2) {
+    top: 300px; /* Ensure enough vertical spacing */
+  }
+
+  .custom-carousel-wrapper:nth-child(3) {
+    top: 500px; /* Ensure enough vertical spacing */
+  }
+
   .custom-slider {
-    width: 150%; /* Match the extended width */
+    width: 200%; /* Match the extended width */
   }
 
   .custom-slide-track {
-    width: calc(200px * 18); /* Ensure proper width for all images */
+    width: calc(100px * 18); /* Adjust width for smaller images */
   }
 
   .custom-slide {
-    width: 200px; /* Maintain image size */
-    height: 120px; /* Maintain image size */
+    width: 100px; /* Adjust image size */
+    height: 60px; /* Adjust image size */
   }
 
   @keyframes custom-scroll {
@@ -749,7 +756,7 @@ position: relative;
     }
 
     100% {
-      transform: translateX(calc(-200px * 9)); /* Move by half the number of images */
+      transform: translateX(calc(-100px * 18)); /* Move by the full width of images */
     }
   }
 }
