@@ -724,8 +724,8 @@ position: relative;
   .custom-carousel-wrapper {
     position: absolute;
     top: 400px;
-    right: 3vw;
-    width: 120vw;
+    right: -2vw;
+    width: 150vw;
     height: 100px;
     overflow-x: hidden;
     transform-origin: right;
