@@ -746,7 +746,7 @@ position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: rgb(232, 193, 232);
+    background-color: rgb(255, 255, 255);
   }
   
   .custom-slide-track {
